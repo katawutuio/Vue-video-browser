@@ -1,5 +1,7 @@
 <template>
-  <div>Hi there.</div>
+  <div>
+    <SearchBar></SearchBar>
+  </div>
 </template>
 
 <script>
