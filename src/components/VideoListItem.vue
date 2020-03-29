@@ -1,6 +1,6 @@
 <template>
-  <li class="list-group-item">
-    <img :src="thumbnailUrl" />
+  <li class="list-group-item d-flex">
+    <img class="mr-3" :src="thumbnailUrl" />
     {{ video.snippet.title }}
   </li>
 </template>
@@ -17,4 +17,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+li {
+  cursor: pointer;
+}
+li:hover {
+  background-color: #eee;
+}
+</style>
