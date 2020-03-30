@@ -4,17 +4,24 @@
       v-for="video in videos"
       :video="video"
       :key="video.etag"
+      @videoSelect="onVideoSelect"
     ></VideoListItem>
   </ul>
 </template>
 
 <script>
-import VideoListItem from './VideoListItem';
+import VideoListItem from "./VideoListItem";
 
 export default {
-  name: 'VideoList',
+  name: "VideoList",
   components: {
     VideoListItem
+  },
+  methods: {
+    onVideoSelect(video) {
+      console.log(video);
+      this.$emit("onVideoSelect", video);
+    }
   },
   props: {
     videos: Array
